@@ -33,7 +33,7 @@ bool db_CLogThread::_PutLog(int level, const char *str) {
     ld->nLevel = level;
     ld->strLog = str;
 
-    if (m_Queue.size() > 800000)
+    if (m_Queue.size() > 20000)
         m_Queue.pop_front();
 
     m_Queue.push_back(std::move(ld));
