@@ -48,7 +48,7 @@ void db_CLogThread::_StartLog(const char *prefix, bool log2file, int filesize) {
     m_nMaxLogFileSize = filesize * 1024 * 1024;
     m_nLogFileSize = 0;
 
-    m_sLogRootDir = "./log/";
+    m_sLogRootDir = "./rdlog/";
     CreateMonthDir();
 
     m_bStop = false;
