@@ -88,17 +88,24 @@ int storage_setkey(Storage_t *db, const char *key, int klen, const char *val, in
 
 
 int storage_getkey(Storage_t *db, const char *key, int klen, void *val, int vlen) {
-
     std::string val0;
+    int l = 0;
     int rc = db->getkey(std::string(key, klen), &val0);
-    memcpy(val, val0.c_str(), val0.length() < vlen - 1 ? val0.length() : vlen - 1);
+    T_LOGI(rc << ",key:" << std::string(key, klen))
+    if (rc == 0) {
+        l = val0.length() < vlen - 1 ? val0.length() : vlen - 1;
+        memcpy(val, val0.c_str(), l);
+        T_LOGI(rc << ",val:" << val0)
+    } else {
+        l = -1;
+    }
 
-    return rc;
+    return l;
 }
 
 
 void init() {
-    db_CLogThread::InitLogger("rdkafka_", true);
+    db_CLogThread::InitLogger("rdkafka", true);
 }
 
 

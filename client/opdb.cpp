@@ -108,8 +108,10 @@ int opdb::getkey(const std::string &keystr, std::string *valuestr) {
 
     if (MDB_NOTFOUND == mdb_get(txn, dbi, &key, &data)) {
         T_LOGW("MDB_NOTFOUND:" << keystr)
+        rc = MDB_NOTFOUND;
     } else {
         valuestr->assign((const char *) data.mv_data, data.mv_size);
+        rc = 0;
     }
 
     T_LOGI(keystr << "," << *valuestr)
