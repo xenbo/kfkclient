@@ -17,6 +17,10 @@ Cgo_comsumer_callback(const char *topic, long long offset, const char *msg, int 
     printf("Cgo_comsumer_callback %s %s  %lld\n", topic, msg, offset);
 }
 
+void cursor_all(void *key, int klen, void *val, int vlen) {
+    printf("Cgo_comsumer_callback %s %s  \n", (char *) key, (char *) val);
+}
+
 }
 
 #include "client/z_hglog.h"

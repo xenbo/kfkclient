@@ -4,6 +4,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(client)
 include_directories(kfkcsrc)
+add_definitions(-g)
 
 set(
         sources
@@ -293,9 +294,9 @@ install(FILES ${GENERATED_DIR}/rdkafka.pc
 #endif ()
 
 
-add_executable(kfkclient test_main2.cpp)
+add_executable(kfkclient  test_main4.cpp)
 #target_link_libraries(kfkclient  rdkafka ssl crypto dl z pthread)
-target_link_libraries(kfkclient  rdkafka  dl z pthread)
+target_link_libraries(kfkclient  rdkafka  dl z pthread stdc++fs)
 
 
 

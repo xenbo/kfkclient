@@ -10,11 +10,15 @@
 extern "C" {
 #include "client/for_go.h"
 
-
 void
 Cgo_comsumer_callback(const char *topic, long long offset, const char *msg, int len, unsigned long long consumer_code) {
     printf("Cgo_comsumer_callback %s %s  %lld\n", topic, msg, offset);
 }
+
+void cursor_all(void *key, int klen, void *val, int vlen) {
+    printf("cursor_all %d   %d  %s -  %s  \n", klen, vlen, (char *) key, (char *) val);
+}
+
 }
 
 
@@ -29,7 +33,7 @@ int main() {
 
 
     std::thread t1([&]() {
-        for (int i = 0; i < 1000000; ++i) {
+        for (int i = 0; i < 1000; ++i) {
             std::string kt = key + std::to_string(i);
             std::string vt = val + std::to_string(i) + "XXXXXXXXXXXXXXXXXXXXXx";
             storage_setkey(s, kt.c_str(), kt.length(), vt.c_str(), vt.length());
@@ -45,7 +49,7 @@ int main() {
 //    });
 
     std::thread t2([&]() {
-        for (int i = 0; i < 1000000; ++i) {
+        for (int i = 0; i < 1000; ++i) {
             std::string kt = key + std::to_string(i);
             std::string value;
 
@@ -57,6 +61,10 @@ int main() {
         }
     });
 
+
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+
+    storage_cursor(s);
 
     std::this_thread::sleep_for(std::chrono::seconds(1000));
     return 0;

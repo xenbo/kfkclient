@@ -6,19 +6,22 @@
 #include "z_hglog.h"
 #include <cassert>
 
+
+extern int send_msg_callback(const std::string &topic, long long nkey);
+
 void Producer::message_receipt_cbk(rd_kafka_t *kf_producer, const rd_kafka_message_t *kf_message, void *opaque) {
     if (kf_message->err) {
-//        std::cout << "Message delivery failed: %s" << rd_kafka_err2str(kf_message->err);
-
         T_LOGW("Message delivery failed: %s" << rd_kafka_err2str(kf_message->err))
     } else {
-//        std::cout << "Message delivered (" << kf_message->len<< " bytes, offset " << kf_message->offset << ") "
-//        << (char *) kf_message->payload << std::endl;
+        const std::string &keys = std::string((const char*)kf_message->key, kf_message->key_len);
+        long long nkey = std::atol(keys.c_str());
+        send_msg_callback(rd_kafka_topic_name(kf_message->rkt), nkey);
 
-        T_LOGI("Message delivered (" << kf_message->len << " bytes, offset " << kf_message->offset << ") "
-                                     << (char *) kf_message->payload)
+        T_LOGI("Message delivered,len:" << kf_message->len
+                                        << ", offset: " << kf_message->offset
+                                        << ",msg:" << (char *) kf_message->payload
+                                        << ",nkey:" << nkey)
     }
-
 }
 
 rd_kafka_topic_t *Producer::create_topic(const std::string &topic) {
@@ -79,7 +82,7 @@ rd_kafka_t *Producer::create_kafka_producer(std::string kfk_addr) { // "192.168.
 }
 
 
-int Producer::send_msg(const std::string &message, std::string topic) {
+int Producer::send_msg(const std::string &message, std::string topic, long long nkey) {
 
     auto it = p_kafka_topics.find(topic);
     if (it == p_kafka_topics.end()) {
@@ -109,13 +112,20 @@ int Producer::send_msg(const std::string &message, std::string topic) {
 
     size_t msg_payload_size = message.length();
 
-    T_LOGI(topic << "," << message)
+    T_LOGI(topic << "," << message << "," << nkey)
 
     // Let's send a message
     // No keys - I don't know how to use them right now - sorry!
-    return rd_kafka_produce(kf_topic, kf_partition, kf_part_msg_flags,
-                            msg_payload, msg_payload_size, nullptr, 0, nullptr);
 
+    if (nkey < 0) {
+        return rd_kafka_produce(kf_topic, kf_partition, kf_part_msg_flags,
+                                msg_payload, msg_payload_size, nullptr, 0, nullptr);
+    } else {
+        char keystr[20] = {0};
+        sprintf(keystr, "%.20ld", nkey);
+        return rd_kafka_produce(kf_topic, kf_partition, kf_part_msg_flags,
+                                msg_payload, msg_payload_size, keystr, sizeof(keystr), nullptr);
+    }
 
 }
 

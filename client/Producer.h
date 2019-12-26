@@ -31,7 +31,7 @@ public:
 
     int create_producer(std::string kfk_addr);
 
-    int send_msg(const std::string &message, std::string topic);
+    int send_msg(const std::string &message, std::string topic, long long key=-1);
 
     int flush(int t = 0);
 

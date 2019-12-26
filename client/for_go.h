@@ -35,8 +35,17 @@ int storage_setkey(Storage_t *db, const char *key, int klen, const char *val, in
 
 int storage_getkey(Storage_t *db, const char *key, int klen ,  void *val ,int vlen) ;
 
+int storage_delkey(Storage_t *db, const char *key, int klen );
+
+int storage_cursor(Storage_t *db);
+
+int storage_first(Storage_t *db, void *key, int klen, void *val, int vlen);
+
+
+int send_msg_with_cache( Producer_t *p, const char *msg, const char *topic) ;
+
 //log
-void init();
+void init(const char *addr);
 
 
 
