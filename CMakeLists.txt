@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 project(kfkclient)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 include_directories(client)
 include_directories(kfkcsrc)
@@ -297,6 +297,7 @@ install(FILES ${GENERATED_DIR}/rdkafka.pc
 add_executable(kfkclient  test_main4.cpp)
 #target_link_libraries(kfkclient  rdkafka ssl crypto dl z pthread)
 target_link_libraries(kfkclient  rdkafka  dl z pthread stdc++fs)
+#target_link_libraries(kfkclient  rdkafka  dl z pthread c++)
 
 
 

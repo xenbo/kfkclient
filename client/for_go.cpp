@@ -17,7 +17,10 @@ extern "C" {
 #include <mutex>
 #include <map>
 #include <atomic>
+
 #include <experimental/filesystem>
+
+
 
 static const int num_max = 50000;
 static const std::string db_dir = "topic_cache/";
@@ -104,6 +107,8 @@ static Storage_t *get_db(const char *dbname, unsigned int mmsize) {
 
     auto it = db_list.find(dbname);
     if (it == db_list.end()) {
+        T_LOGI(dbname)
+
         auto s = new Storage_t;
         std::string path = db_dir + dbname;
         T_LOGI(path)
@@ -114,6 +119,8 @@ static Storage_t *get_db(const char *dbname, unsigned int mmsize) {
         s->initdb(path, mmsize);
         db_list[dbname] = s;
         return s;
+    } else{
+
     }
 
     return it->second;

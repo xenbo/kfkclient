@@ -102,7 +102,7 @@ int opdb::getkey(const std::string &keystr, std::string *valuestr) {
 
     memcpy(keytmp, keystr.c_str(), keystr.length() < sizeof(keytmp) - 1 ? keystr.length() : sizeof(keytmp) - 1);
 
-    mdb_txn_begin(env, NULL, 0, &txn);
+    mdb_txn_begin(env, NULL, MDB_RDONLY, &txn);
     mdb_dbi_open(txn, NULL, 0, &dbi);
 
     key.mv_size = strlen(keytmp);
@@ -129,7 +129,7 @@ int opdb::getkey(const std::string &keystr, std::string *valuestr) {
 int opdb::cursor_(std::map<std::string, std::string> &list) {
 
     MDB_cursor *cursor;
-    mdb_txn_begin(env, NULL, 0, &txn);
+    mdb_txn_begin(env, NULL, MDB_RDONLY , &txn);
     mdb_dbi_open(txn, NULL, 0, &dbi);
     mdb_cursor_open(txn, dbi, &cursor);
 
@@ -159,7 +159,7 @@ int opdb::cursor_(std::map<std::string, std::string> &list) {
 int opdb::get_first(std::string *keystr, std::string *valuestr) {
 
     MDB_cursor *cursor;
-    mdb_txn_begin(env, NULL, 0, &txn);
+    mdb_txn_begin(env, NULL, MDB_RDONLY, &txn);
     mdb_dbi_open(txn, NULL, 0, &dbi);
     mdb_cursor_open(txn, dbi, &cursor);
 
