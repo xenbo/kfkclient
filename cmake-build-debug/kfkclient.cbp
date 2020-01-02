@@ -8,552 +8,552 @@
 		<Option virtualFolders="CMake Files\;CMake Files\packaging\;CMake Files\packaging\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/dongbo/testcode/kfkclient/cmake-build-debug"/>
+				<Option working_dir="/home/dongbo/Downloads/kafkaclient/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="/Users/dongbo/testcode/kfkclient/cmake-build-debug"/>
+				<Option working_dir="/home/dongbo/Downloads/kafkaclient/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install">
-				<Option working_dir="/Users/dongbo/testcode/kfkclient/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/Users/dongbo/testcode/kfkclient/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="kfkclient">
-				<Option output="/Users/dongbo/testcode/kfkclient/cmake-build-debug/kfkclient" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/dongbo/testcode/kfkclient/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/dongbo/testcode/kfkclient/client"/>
-					<Add directory="/Users/dongbo/testcode/kfkclient/kfkcsrc"/>
-					<Add directory="/Users/dongbo/testcode/kfkclient"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/x86_64-apple-darwin19"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/backward"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include-fixed"/>
-					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 kfkclient"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="kfkclient/fast">
-				<Option output="/Users/dongbo/testcode/kfkclient/cmake-build-debug/kfkclient" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/dongbo/testcode/kfkclient/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/dongbo/testcode/kfkclient/client"/>
-					<Add directory="/Users/dongbo/testcode/kfkclient/kfkcsrc"/>
-					<Add directory="/Users/dongbo/testcode/kfkclient"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/x86_64-apple-darwin19"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/backward"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include-fixed"/>
-					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 kfkclient/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/Users/dongbo/testcode/kfkclient/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/dongbo/testcode/kfkclient/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="/Users/dongbo/testcode/kfkclient/cmake-build-debug"/>
+				<Option working_dir="/home/dongbo/Downloads/kafkaclient/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rdkafka">
-				<Option output="/Users/dongbo/testcode/kfkclient/cmake-build-debug/librdkafka.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/dongbo/testcode/kfkclient/cmake-build-debug"/>
+			<Target title="install">
+				<Option working_dir="/home/dongbo/Downloads/kafkaclient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/dongbo/Downloads/kafkaclient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="syrdkafka">
+				<Option output="/home/dongbo/Downloads/kafkaclient/cmake-build-debug/libsyrdkafka.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dongbo/Downloads/kafkaclient/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/dongbo/testcode/kfkclient/client"/>
-					<Add directory="/Users/dongbo/testcode/kfkclient/kfkcsrc"/>
-					<Add directory="/Users/dongbo/testcode/kfkclient"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/x86_64-apple-darwin19"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/backward"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include-fixed"/>
-					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks"/>
+					<Add directory="/home/dongbo/Downloads/kafkaclient/client"/>
+					<Add directory="/home/dongbo/Downloads/kafkaclient/kfkcsrc"/>
+					<Add directory="/home/dongbo/Downloads/kafkaclient"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/include"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 rdkafka"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 syrdkafka"/>
+					<CompileFile command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rdkafka/fast">
-				<Option output="/Users/dongbo/testcode/kfkclient/cmake-build-debug/librdkafka.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/dongbo/testcode/kfkclient/cmake-build-debug"/>
+			<Target title="syrdkafka/fast">
+				<Option output="/home/dongbo/Downloads/kafkaclient/cmake-build-debug/libsyrdkafka.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dongbo/Downloads/kafkaclient/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/dongbo/testcode/kfkclient/client"/>
-					<Add directory="/Users/dongbo/testcode/kfkclient/kfkcsrc"/>
-					<Add directory="/Users/dongbo/testcode/kfkclient"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/x86_64-apple-darwin19"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/backward"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include"/>
-					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include-fixed"/>
-					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks"/>
+					<Add directory="/home/dongbo/Downloads/kafkaclient/client"/>
+					<Add directory="/home/dongbo/Downloads/kafkaclient/kfkcsrc"/>
+					<Add directory="/home/dongbo/Downloads/kafkaclient"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/include"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 rdkafka/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dongbo/testcode/kfkclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 syrdkafka/fast"/>
+					<CompileFile command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/dongbo/Downloads/kafkaclient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="kfkclient">
+				<Option output="/home/dongbo/Downloads/kafkaclient/cmake-build-debug/kfkclient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dongbo/Downloads/kafkaclient/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/dongbo/Downloads/kafkaclient/client"/>
+					<Add directory="/home/dongbo/Downloads/kafkaclient/kfkcsrc"/>
+					<Add directory="/home/dongbo/Downloads/kafkaclient"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 kfkclient"/>
+					<CompileFile command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="kfkclient/fast">
+				<Option output="/home/dongbo/Downloads/kafkaclient/cmake-build-debug/kfkclient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dongbo/Downloads/kafkaclient/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/dongbo/Downloads/kafkaclient/client"/>
+					<Add directory="/home/dongbo/Downloads/kafkaclient/kfkcsrc"/>
+					<Add directory="/home/dongbo/Downloads/kafkaclient"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/rh/devtoolset-8/root/usr/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 kfkclient/fast"/>
+					<CompileFile command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/dongbo/Downloads/kafkaclient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/rh/devtoolset-8/root/bin/gmake -j12 -f &quot;/home/dongbo/Downloads/kafkaclient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/Consumer.cpp">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/Consumer.cpp">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/Consumer.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/Consumer.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/Producer.cpp">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/Producer.cpp">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/Producer.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/Producer.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/for_go.cpp">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/for_go.cpp">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/for_go.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/for_go.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/mdb.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/mdb.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/midl.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/midl.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/midl.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/midl.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/opdb.cpp">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/opdb.cpp">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/opdb.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/opdb.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/z_hglog.cpp">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/z_hglog.cpp">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/client/z_hglog.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/client/z_hglog.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/config.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/config.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/crc32c.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/crc32c.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/crc32c.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/crc32c.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/lz4.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/lz4.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/lz4.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/lz4.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/lz4frame.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/lz4frame.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/lz4frame.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/lz4frame.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/lz4hc.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/lz4hc.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/lz4hc.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/lz4hc.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdaddr.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdaddr.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdaddr.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdaddr.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdavl.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdavl.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdavl.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdavl.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdbuf.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdbuf.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdbuf.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdbuf.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdcrc32.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdcrc32.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdcrc32.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdcrc32.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_admin.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_admin.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_admin.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_admin.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_assignor.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_assignor.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_assignor.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_assignor.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_aux.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_aux.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_aux.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_aux.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_background.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_background.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_broker.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_broker.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_broker.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_broker.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_buf.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_buf.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_buf.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_buf.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_cert.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_cert.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_cert.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_cert.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_cgrp.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_cgrp.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_cgrp.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_cgrp.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_conf.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_conf.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_conf.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_conf.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_event.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_event.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_event.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_event.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_feature.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_feature.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_feature.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_feature.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_header.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_header.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_header.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_header.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_idempotence.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_idempotence.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_idempotence.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_idempotence.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_interceptor.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_interceptor.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_interceptor.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_interceptor.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_lz4.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_lz4.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_lz4.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_lz4.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_metadata.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_metadata.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_metadata.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_metadata.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_metadata_cache.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_metadata_cache.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_mock.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_mock.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_mock.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_mock.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_mock_handlers.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_mock_handlers.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_msg.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_msg.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_msg.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_msg.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_msgset_reader.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_msgset_reader.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_msgset_writer.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_msgset_writer.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_offset.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_offset.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_offset.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_offset.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_op.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_op.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_op.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_op.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_partition.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_partition.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_partition.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_partition.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_pattern.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_pattern.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_pattern.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_pattern.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_queue.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_queue.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_queue.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_queue.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_range_assignor.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_range_assignor.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_request.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_request.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_request.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_request.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_roundrobin_assignor.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_roundrobin_assignor.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_sasl.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_sasl.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_sasl.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_sasl.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_sasl_plain.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_sasl_plain.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_subscription.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_subscription.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_timer.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_timer.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_timer.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_timer.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_topic.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_topic.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_topic.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_topic.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_transport.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_transport.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdkafka_transport.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdkafka_transport.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdlist.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdlist.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdlist.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdlist.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdlog.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdlog.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdlog.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdlog.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdmurmur2.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdmurmur2.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdmurmur2.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdmurmur2.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdports.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdports.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdports.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdports.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdrand.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdrand.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdrand.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdrand.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdregex.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdregex.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdregex.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdregex.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdstring.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdstring.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdstring.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdstring.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdunittest.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdunittest.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdunittest.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdunittest.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdvarint.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdvarint.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/rdvarint.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/rdvarint.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/regexp.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/regexp.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/regexp.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/regexp.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/snappy.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/snappy.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/snappy.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/snappy.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/tinycthread.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/tinycthread.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/tinycthread.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/tinycthread.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/tinycthread_extra.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/tinycthread_extra.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/tinycthread_extra.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/tinycthread_extra.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/xxhash.c">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/xxhash.c">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/kfkcsrc/xxhash.h">
-			<Option target="rdkafka"/>
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/kfkcsrc/xxhash.h">
+			<Option target="syrdkafka"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/test_main4.cpp">
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/test_main2.cpp">
 			<Option target="kfkclient"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/CMakeLists.txt">
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/dongbo/testcode/kfkclient/packaging/cmake/rdkafka.pc.in">
+		<Unit filename="/home/dongbo/Downloads/kafkaclient/packaging/cmake/rdkafka.pc.in">
 			<Option virtualFolder="CMake Files\packaging\cmake\"/>
 		</Unit>
 	</Project>

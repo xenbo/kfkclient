@@ -295,7 +295,7 @@ install(FILES ${GENERATED_DIR}/rdkafka.pc
 add_executable(kfkclient  test_main2.cpp)
 #target_link_libraries(kfkclient  syrdkafka ssl crypto dl z pthread)
 target_link_libraries(kfkclient  syrdkafka  dl z pthread stdc++fs)
-#target_link_libraries(kfkclient  rdkafka  dl z pthread c++)
+#target_link_libraries(kfkclient  syrdkafka  dl z pthread c++)
 
 
 

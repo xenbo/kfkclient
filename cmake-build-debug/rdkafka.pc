@@ -9,4 +9,4 @@ Version:
 Requires: 
 Cflags: -I${includedir}
 Libs: -L${libdir} -lrdkafka
-Libs.private: -lpthread
+Libs.private: -lpthread -lrt

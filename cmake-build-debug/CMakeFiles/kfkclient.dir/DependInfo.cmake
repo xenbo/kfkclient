@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/dongbo/testcode/kfkclient/test_main4.cpp" "/Users/dongbo/testcode/kfkclient/cmake-build-debug/CMakeFiles/kfkclient.dir/test_main4.cpp.o"
+  "/home/dongbo/Downloads/kafkaclient/test_main2.cpp" "/home/dongbo/Downloads/kafkaclient/cmake-build-debug/CMakeFiles/kfkclient.dir/test_main2.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/dongbo/testcode/kfkclient/cmake-build-debug/CMakeFiles/rdkafka.dir/DependInfo.cmake"
+  "/home/dongbo/Downloads/kafkaclient/cmake-build-debug/CMakeFiles/syrdkafka.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
