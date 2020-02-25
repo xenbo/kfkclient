@@ -304,13 +304,15 @@ install(FILES ${GENERATED_DIR}/rdkafka.pc
 #endif ()
 
 
+
 add_executable(kfkclient test_main2.cpp)
 #target_link_libraries(kfkclient  syrdkafka ssl crypto dl z pthread)
 
 
 
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-    target_link_libraries(kfkclient  syrdkafka  dl z pthread stdc++fs)
+    target_include_directories(syrdkafka -fPIC -Wl,--whole-archive libstdc++.a libstdc++fs.a -Wl,--no-whole-archive)
+    target_link_libraries(kfkclient  syrdkafka  dl z pthread)
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "AppleClang")
     target_link_libraries(kfkclient  syrdkafka  dl z pthread c++) ##use clang
 endif ()
