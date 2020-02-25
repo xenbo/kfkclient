@@ -10,12 +10,6 @@ add_definitions(-g)
 #add_definitions(-fPIC)
 add_definitions(-DLEVELDB_PLATFORM_POSIX=1)
 
-if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-    set(LINKERFLAGS " -static-libstdc++ -static-libgcc -Wl,-gc-sections")
-    set(LINKERFLAGS "${LINKERFLAGS} -Wl,-rpath=./")
-    set(CMAKE_STATIC_LINKER_FLAGS "${CMAKE_STATIC_LINKER_FLAGS}  ${LINKERFLAGS}")
-endif ()
-
 set(
         sources
         kfkcsrc/crc32c.c
@@ -315,8 +309,7 @@ add_executable(kfkclient test_main2.cpp)
 
 
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-    target_link_libraries(syrdkafka -fPIC -Wl,--whole-archive libstdc++.a libstdc++fs.a -Wl,--no-whole-archive)
-    target_link_libraries(kfkclient syrdkafka dl z pthread)
+    target_link_libraries(kfkclient syrdkafka dl z pthread stdc++ stdc++fs)
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "AppleClang")
     target_link_libraries(kfkclient syrdkafka dl z pthread c++) ##use clang
 endif ()
