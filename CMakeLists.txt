@@ -1,11 +1,14 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.10)
 project(kfkclient)
 set(CMAKE_CXX_STANDARD 17)
 
 include_directories(client)
 include_directories(kfkcsrc)
-#add_definitions(-g)
+
+add_definitions(-g)
+#add_definitions(-W -Wall -Wno-unused-parameter -Wbad-function-cast -Wuninitialized)
 #add_definitions(-fPIC)
+add_definitions(-DLEVELDB_PLATFORM_POSIX=1)
 
 set(
         sources
@@ -68,10 +71,10 @@ set(
         client/for_go.cpp
         client/mdb.c
         client/midl.c
-        client/opdb.cpp
+        client/opdb2.cpp
         client/Producer.cpp
         client/z_hglog.cpp
-        kfkcsrc/config.h)
+        kfkcsrc/config.h client/opdb2.cpp)
 
 
 #set(GENERATED_DIR "${CMAKE_CURRENT_BINARY_DIR}/generated")
@@ -127,9 +130,9 @@ endif ()
 # Define flags with cmake instead of by defining them on win32_config.h
 if (WITHOUT_WIN32_CONFIG)
     list(APPEND rdkafka_compile_definitions WITHOUT_WIN32_CONFIG)
-#    if (WITH_SSL)
-#        list(APPEND rdkafka_compile_definitions WITH_SSL)
-#    endif (WITH_SSL)
+    #    if (WITH_SSL)
+    #        list(APPEND rdkafka_compile_definitions WITH_SSL)
+    #    endif (WITH_SSL)
     if (WITH_ZLIB)
         list(APPEND rdkafka_compile_definitions WITH_ZLIB)
     endif (WITH_ZLIB)
@@ -153,6 +156,16 @@ if (WITHOUT_WIN32_CONFIG)
     endif (WITH_PLUGINS)
 endif ()
 
+
+include_directories(write_leveldb/leveldb_by_db)
+include_directories(write_leveldb/leveldb_by_db/include)
+
+
+aux_source_directory(write_leveldb/leveldb_by_db/db sources)
+aux_source_directory(write_leveldb/leveldb_by_db/table sources)
+aux_source_directory(write_leveldb/leveldb_by_db/util sources)
+aux_source_directory(write_leveldb/leveldb_by_db/db sources)
+
 add_library(syrdkafka STATIC ${sources})
 
 
@@ -162,7 +175,6 @@ target_compile_definitions(syrdkafka PUBLIC ${rdkafka_compile_definitions})
 if (RDKAFKA_BUILD_STATIC)
     target_compile_definitions(syrdkafka PUBLIC LIBRDKAFKA_STATICLIB)
 endif ()
-
 
 
 if (WITH_HDRHISTOGRAM)
@@ -235,15 +247,15 @@ endif ()
 #if (WITH_SSL)
 #    string(APPEND PKG_CONFIG_REQUIRES "libssl ")
 #endif ()
-if (WITH_SASL_CYRUS)
-    string(APPEND PKG_CONFIG_REQUIRES "libsasl2 ")
-endif ()
-if (WITH_ZSTD)
-    string(APPEND PKG_CONFIG_REQUIRES "libzstd ")
-endif ()
-if (WITH_LZ4_EXT)
-    string(APPEND PKG_CONFIG_REQUIRES "liblz4 ")
-endif ()
+#if (WITH_SASL_CYRUS)
+#    string(APPEND PKG_CONFIG_REQUIRES "libsasl2 ")
+#endif ()
+#if (WITH_ZSTD)
+#    string(APPEND PKG_CONFIG_REQUIRES "libzstd ")
+#endif ()
+#if (WITH_LZ4_EXT)
+#    string(APPEND PKG_CONFIG_REQUIRES "liblz4 ")
+#endif ()
 set(PKG_CONFIG_CFLAGS
         "-I\${includedir}"
         )
@@ -292,11 +304,16 @@ install(FILES ${GENERATED_DIR}/rdkafka.pc
 #endif ()
 
 
-add_executable(kfkclient  test_main2.cpp)
+add_executable(kfkclient test_main2.cpp)
 #target_link_libraries(kfkclient  syrdkafka ssl crypto dl z pthread)
-target_link_libraries(kfkclient  syrdkafka  dl z pthread stdc++fs)
-#target_link_libraries(kfkclient  syrdkafka  dl z pthread c++)
 
+
+
+if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+    target_link_libraries(kfkclient  syrdkafka  dl z pthread stdc++fs)
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "AppleClang")
+    target_link_libraries(kfkclient  syrdkafka  dl z pthread c++) ##use clang
+endif ()
 
 
 

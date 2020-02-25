@@ -20,7 +20,6 @@
 #include <experimental/filesystem>
 
 
-
 static const int num_max = 50000;
 static const std::string db_dir = "topic_cache/";
 static std::string kafka_addr = "";
@@ -35,7 +34,7 @@ struct Consumer_t : public Consumer {
 
 };
 
-static Producer_t *get_producer( const std::string &topic) {
+static Producer_t *get_producer(const std::string &topic) {
     static std::atomic_bool f = {false};
     static std::mutex pmux;
     static Producer_t p;
@@ -107,15 +106,16 @@ static Storage_t *get_db(const char *dbname, unsigned int mmsize) {
 
     auto it = db_list.find(dbname);
     if (it == db_list.end()) {
-        T_LOGI(dbname)
 
         auto s = new Storage_t;
         std::string path = db_dir + dbname;
-        T_LOGI(path)
+        T_LOGI("apath:"<<path)
         try {
-            std::experimental::filesystem::create_directory(db_dir);
-            std::experimental::filesystem::create_directory(path);
-        }catch (std::exception &e){
+            if(!std::experimental::filesystem::exists(db_dir))
+                std::experimental::filesystem::create_directory(db_dir);
+            if(!std::experimental::filesystem::exists(path))
+                std::experimental::filesystem::create_directory(path);
+        } catch (std::exception &e) {
             T_LOGI(e.what())
         }
 
@@ -126,8 +126,6 @@ static Storage_t *get_db(const char *dbname, unsigned int mmsize) {
         s->initdb(path, mmsize);
         db_list[dbname] = s;
         return s;
-    } else{
-
     }
 
     return it->second;
@@ -151,7 +149,7 @@ int storage_getkey(Storage_t *db, const char *key, int klen, void *val, int vlen
     if (rc == 0) {
         l = val0.length() < vlen - 1 ? val0.length() : vlen - 1;
         memcpy(val, val0.c_str(), l);
-        T_LOGI("rc:" << rc << ",key:" << std::string(key, klen) << ",val:" << (char*)val)
+        T_LOGI("rc:" << rc << ",key:" << std::string(key, klen) << ",val:" << (char *) val)
     } else {
         T_LOGW("rc:" << rc << ",key:" << std::string(key, klen))
         l = -1;
@@ -196,7 +194,7 @@ int send_msg_callback(const std::string &topic, long long nkey) {
 
     Storage_t *db = get_db(topic.c_str(), -1);
     char id[20] = {0};
-    sprintf(id, "%.20ld", nkey);
+    sprintf(id, "%.20lld", nkey);
     std::string key = topic + std::string(id);
     int rc = storage_delkey(db, key.c_str(), key.length());
 
@@ -219,12 +217,12 @@ int send_msg_with_cache(Producer_t *p, const char *msg, const char *topic) {
 
     {   //msg
         char id[20] = {0};
-        sprintf(id, "%.20ld", num);
+        sprintf(id, "%.20lld", num);
         std::string key = topic + std::string(id);
         storage_setkey(db, key.c_str(), key.length(), msg, strlen(msg));
 
         //next offset = num + 1
-        sprintf(desc_tmp, "%ld", num + 1);
+        sprintf(desc_tmp, "%lld", num + 1);
         storage_setkey(db, desc.c_str(), desc.length(), desc_tmp, sizeof(desc_tmp));
     }
 
@@ -246,7 +244,7 @@ int send_msg_with_cache(Producer_t *p, const char *msg, const char *topic) {
 }
 
 
-static void re_send( const std::string &topic) {
+static void re_send(const std::string &topic) {
     std::map<std::string, std::string> v;
     auto db = get_db(topic.c_str(), -1);
     db->cursor_(v);
@@ -262,8 +260,9 @@ static void re_send( const std::string &topic) {
 
 
 void recover() {
-    db_CLogThread::InitLogger("rdkafka", true);
-    std::experimental::filesystem::create_directory("topic_cache");
+
+    if (!std::experimental::filesystem::exists("topic_cache"))
+        std::experimental::filesystem::create_directory("topic_cache");
 
     auto demo_status = [&](const std::experimental::filesystem::path &p, std::experimental::filesystem::file_status s) {
 //        if (std::experimental::filesystem::is_regular_file(s)) std::cout << " is a regular file\n";
@@ -275,21 +274,24 @@ void recover() {
 //        if (std::experimental::filesystem::is_symlink(s)) std::cout << " is a symlink\n";
 //        if (!std::experimental::filesystem::exists(s)) std::cout << " does not exist\n";
 
-        T_LOGI(p)
-
-        auto i = p.string().find("/");
-        auto topic_dbname = p.string().substr(i + 1);
-        re_send(topic_dbname);
 
     };
 
-    for (auto it = std::experimental::filesystem::directory_iterator("topic_cache");
-         it != std::experimental::filesystem::directory_iterator(); ++it) {
-        demo_status(*it, it->symlink_status());
+    for (auto &p : std::experimental::filesystem::directory_iterator("topic_cache")) {
+        std::experimental::filesystem::file_status s = p.symlink_status();
+//        demo_status(*it, it->symlink_status());
+        T_LOGI(p.path())
+
+        auto i = p.path().string().find("/");
+        if (i != std::string::npos) {
+            auto topic_dbname = p.path().string().substr(i + 1);
+            re_send(topic_dbname);
+        }
     }
 }
 
 void set_kfk_addr(const char *addr) {
+    db_CLogThread::InitLogger("rdkafka", true);
     kafka_addr = addr;
 }
 

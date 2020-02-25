@@ -13,7 +13,7 @@ void Producer::message_receipt_cbk(rd_kafka_t *kf_producer, const rd_kafka_messa
     if (kf_message->err) {
         T_LOGW("Message delivery failed: %s" << rd_kafka_err2str(kf_message->err))
     } else {
-        const std::string &keys = std::string((const char*)kf_message->key, kf_message->key_len);
+        const std::string &keys = std::string((const char *) kf_message->key, kf_message->key_len);
         long long nkey = std::atol(keys.c_str());
         send_msg_callback(rd_kafka_topic_name(kf_message->rkt), nkey);
 
@@ -22,6 +22,8 @@ void Producer::message_receipt_cbk(rd_kafka_t *kf_producer, const rd_kafka_messa
                                         << ",msg:" << (char *) kf_message->payload
                                         << ",nkey:" << nkey)
     }
+
+    std::cout << "message_receipt_cbk" << std::endl;
 }
 
 rd_kafka_topic_t *Producer::create_topic(const std::string &topic) {
@@ -117,19 +119,23 @@ int Producer::send_msg(const std::string &message, std::string topic, long long 
     // Let's send a message
     // No keys - I don't know how to use them right now - sorry!
 
+    int f = -1;
     if (nkey < 0) {
-        return rd_kafka_produce(kf_topic, kf_partition, kf_part_msg_flags,
-                                msg_payload, msg_payload_size, nullptr, 0, nullptr);
+        f = rd_kafka_produce(kf_topic, kf_partition, kf_part_msg_flags,
+                             msg_payload, msg_payload_size, nullptr, 0, nullptr);
     } else {
         char keystr[20] = {0};
-        sprintf(keystr, "%.20ld", nkey);
-        return rd_kafka_produce(kf_topic, kf_partition, kf_part_msg_flags,
-                                msg_payload, msg_payload_size, keystr, sizeof(keystr), nullptr);
+        sprintf(keystr, "%.20lld", nkey);
+        f = rd_kafka_produce(kf_topic, kf_partition, kf_part_msg_flags,
+                             msg_payload, msg_payload_size, keystr, sizeof(keystr), nullptr);
     }
 
+    rd_kafka_poll(kf_producer, 1000);
+    return f;
 }
 
 int Producer::flush(int t) {
     assert(kf_producer != nullptr);
+
     return rd_kafka_flush(kf_producer, 0 * 1000);
 }
