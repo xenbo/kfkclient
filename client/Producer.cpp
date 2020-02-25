@@ -23,7 +23,7 @@ void Producer::message_receipt_cbk(rd_kafka_t *kf_producer, const rd_kafka_messa
                                         << ",nkey:" << nkey)
     }
 
-    std::cout << "message_receipt_cbk" << std::endl;
+//    std::cout << "message_receipt_cbk" << std::endl;
 }
 
 rd_kafka_topic_t *Producer::create_topic(const std::string &topic) {
