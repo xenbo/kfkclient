@@ -216,8 +216,8 @@ if (LINK_ATOMIC)
     target_link_libraries(syrdkafka PUBLIC "-latomic")
 endif ()
 
-find_package(Threads REQUIRED)
-target_link_libraries(syrdkafka PUBLIC Threads::Threads)
+#find_package(Threads REQUIRED)
+#target_link_libraries(syrdkafka PUBLIC Threads::Threads)
 
 if (WITH_SASL_CYRUS)
     target_link_libraries(syrdkafka PUBLIC ${SASL_LIBRARIES})
@@ -315,7 +315,7 @@ add_executable(kfkclient test_main2.cpp)
 
 
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-    target_include_directories(syrdkafka -fPIC -Wl,--whole-archive libstdc++.a libstdc++fs.a -Wl,--no-whole-archive)
+    target_link_libraries(syrdkafka -fPIC -Wl,--whole-archive libstdc++.a libstdc++fs.a -Wl,--no-whole-archive)
     target_link_libraries(kfkclient syrdkafka dl z pthread)
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "AppleClang")
     target_link_libraries(kfkclient syrdkafka dl z pthread c++) ##use clang
