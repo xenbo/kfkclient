@@ -1,0 +1,12 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: librdkafka
+Description: The Apache Kafka C/C++ library
+Version: 
+Requires: 
+Cflags: -I${includedir}
+Libs: -L${libdir} -lrdkafka
+Libs.private: -lpthread -lrt

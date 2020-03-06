@@ -138,7 +138,6 @@ int Producer::send_msg(const std::string &message, std::string topic, long long 
 }
 
 int Producer::flush(int t) {
-    std::lock_guard lock(mx);
     assert(kf_producer != nullptr);
 
     return rd_kafka_flush(kf_producer, 0 * 1000);
