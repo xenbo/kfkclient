@@ -25,4 +25,6 @@ Build from source Requirements
 
 
 # go_kfk_client need libsyrdkafka
+https://github.com/xenbo/go_kfk_client
+
 sudo cp ./libsyrdkafka.a  $GOPATH/pkg/mod/github.com/xenbo/go_kfk_client@v0.0.0-20200306042118-846a1810099c/lib
