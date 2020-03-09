@@ -2,6 +2,7 @@
 
 # Introduction
 libsyrdkafka comes from librdkafka.  https://github.com/edenhill/librdkafka
+
 When producing a message, write the data to the cache first, when Kafka confirms. libsyrdkafka clears the cache
 
 
