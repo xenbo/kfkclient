@@ -311,10 +311,12 @@ configure_file(
 add_executable(syrdkafka_client test_main2.cpp)
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
     target_link_libraries(syrdkafka_client syrdkafka dl z pthread stdc++)
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/syrdkafka.pc DESTINATION /usr/share/pkgconfig)
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "AppleClang")
     target_link_libraries(syrdkafka_client syrdkafka dl z pthread c++) ##use clang
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/syrdkafka.pc DESTINATION /usr/local/lib/pkgconfig)
 endif ()
 
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libsyrdkafka.a DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/syrdkafka.pc DESTINATION /usr/share/pkgconfig)
+
