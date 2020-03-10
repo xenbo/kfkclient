@@ -1,8 +1,0 @@
-/home/dongbo/Documents/test_code/kfkclient/cmake-build-debug/CMakeFiles/install/strip.dir
-/home/dongbo/Documents/test_code/kfkclient/cmake-build-debug/CMakeFiles/install/local.dir
-/home/dongbo/Documents/test_code/kfkclient/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/dongbo/Documents/test_code/kfkclient/cmake-build-debug/CMakeFiles/syrdkafka.dir
-/home/dongbo/Documents/test_code/kfkclient/cmake-build-debug/CMakeFiles/list_install_components.dir
-/home/dongbo/Documents/test_code/kfkclient/cmake-build-debug/CMakeFiles/syrdkafka_client.dir
-/home/dongbo/Documents/test_code/kfkclient/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/dongbo/Documents/test_code/kfkclient/cmake-build-debug/CMakeFiles/install.dir
