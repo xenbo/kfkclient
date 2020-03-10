@@ -29,7 +29,7 @@ db_CLogThread::~db_CLogThread() {
 bool db_CLogThread::_PutLog(int level, const char *str) {
     std::lock_guard<std::mutex> lock(mux);
 
-    auto ld = std::make_unique<db_tagLogData>();
+    auto ld = std::make_shared<db_tagLogData>();
     ld->nLevel = level;
     ld->strLog = str;
 

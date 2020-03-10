@@ -1,14 +1,16 @@
 cmake_minimum_required(VERSION 3.10)
-project(kfkclient)
-set(CMAKE_CXX_STANDARD 17)
+project(syrdkafka_client)
+set(CMAKE_CXX_STANDARD 11)
 
 include_directories(client)
 include_directories(kfkcsrc)
+include_directories(opfile)
 
 add_definitions(-g)
 #add_definitions(-W -Wall -Wno-unused-parameter -Wbad-function-cast -Wuninitialized)
 #add_definitions(-fPIC)
 add_definitions(-DLEVELDB_PLATFORM_POSIX=1)
+
 
 set(
         sources
@@ -166,6 +168,8 @@ aux_source_directory(write_leveldb/leveldb_by_db/table sources)
 aux_source_directory(write_leveldb/leveldb_by_db/util sources)
 aux_source_directory(write_leveldb/leveldb_by_db/db sources)
 
+aux_source_directory(opfile/boost/filesystem/src sources)
+
 add_library(syrdkafka STATIC ${sources})
 
 
@@ -232,10 +236,10 @@ endif ()
 
 # Generate pkg-config file
 set(PKG_CONFIG_NAME
-        "librdkafka"
+        "libsyrdkafka"
         )
 set(PKG_CONFIG_DESCRIPTION
-        "The Apache Kafka C/C++ library"
+        "The  syKafka C/C++ library"
         )
 set(PKG_CONFIG_VERSION
         "${PROJECT_VERSION}"
@@ -260,7 +264,7 @@ set(PKG_CONFIG_CFLAGS
         "-I\${includedir}"
         )
 set(PKG_CONFIG_LIBS
-        "-L\${libdir} -lrdkafka"
+        "-L\${libdir} -lsyrdkafka"
         )
 set(PKG_CONFIG_LIBS_PRIVATE
         "-lpthread"
@@ -275,14 +279,14 @@ endif ()
 if (WITH_HDRHISTOGRAM)
     string(APPEND PKG_CONFIG_LIBS_PRIVATE " -lm")
 endif ()
+
+
 configure_file(
-        "packaging/cmake/rdkafka.pc.in"
-        "./rdkafka.pc"
+        "packaging/cmake/syrdkafka.pc.in"
+        "./syrdkafka.pc"
         @ONLY
 )
-install(FILES ${GENERATED_DIR}/rdkafka.pc
-        DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig"
-        )
+
 #if (RDKAFKA_BUILD_STATIC)
 #    set(PKG_CONFIG_NAME
 #            "librdkafka-static"
@@ -294,7 +298,7 @@ install(FILES ${GENERATED_DIR}/rdkafka.pc
 #            "-L\${libdir} \${libdir}/librdkafka.a"
 #            )
 #    configure_file(
-#            "../packaging/cmake/rdkafka.pc.in"
+#            "../packaging/cmake/syrdkafka.pc.in"
 #            "${GENERATED_DIR}/rdkafka-static.pc"
 #            @ONLY
 #    )
@@ -304,20 +308,13 @@ install(FILES ${GENERATED_DIR}/rdkafka.pc
 #endif ()
 
 
-add_executable(kfkclient test_main2.cpp)
-#target_link_libraries(kfkclient  syrdkafka ssl crypto dl z pthread)
-
-
+add_executable(syrdkafka_client test_main2.cpp)
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-
-    target_link_libraries(kfkclient syrdkafka dl z pthread stdc++  stdc++fs)
+    target_link_libraries(syrdkafka_client syrdkafka dl z pthread stdc++)
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "AppleClang")
-    target_link_libraries(kfkclient syrdkafka dl z pthread c++) ##use clang
+    target_link_libraries(syrdkafka_client syrdkafka dl z pthread c++) ##use clang
 endif ()
 
 
-
-
-
-
-
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libsyrdkafka.a DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/syrdkafka.pc DESTINATION /usr/share/pkgconfig)

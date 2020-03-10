@@ -36,7 +36,7 @@ rd_kafka_topic_t *Producer::create_topic(const std::string &topic) {
 }
 
 int Producer::add_produce_topic(const std::string &topic) {
-    std::lock_guard lock(mx);
+    std::lock_guard<std::mutex> lock(mx);
     assert(kf_producer != nullptr);
 
     auto it = p_kafka_topics.find(topic);
@@ -51,7 +51,7 @@ int Producer::add_produce_topic(const std::string &topic) {
 }
 
 int Producer::create_producer(std::string kfk_addr) {
-    std::lock_guard lock(mx);
+    std::lock_guard<std::mutex> lock(mx);
     if (kf_producer == nullptr) {
         kf_producer = create_kafka_producer(kfk_addr);
     }
@@ -88,7 +88,7 @@ rd_kafka_t *Producer::create_kafka_producer(std::string kfk_addr) { // "192.168.
 
 
 int Producer::send_msg(const std::string &message, std::string topic, long long nkey) {
-    std::lock_guard lock(mx);
+    std::lock_guard<std::mutex> lock(mx);
     auto it = p_kafka_topics.find(topic);
     if (it == p_kafka_topics.end()) {
         return -1;

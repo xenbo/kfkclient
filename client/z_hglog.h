@@ -82,8 +82,8 @@ private:
 
 private:
 
-    std::list<std::unique_ptr<db_tagLogData >> m_Queue;
-    std::list<std::unique_ptr<db_tagLogData >> m_QueueOut;
+    std::list<std::shared_ptr<db_tagLogData >> m_Queue;
+    std::list<std::shared_ptr<db_tagLogData >> m_QueueOut;
     bool m_bStop;
 
 
