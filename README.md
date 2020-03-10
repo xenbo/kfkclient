@@ -1,4 +1,4 @@
-# kfkclient （Libsyrdkafka）
+# kfkclient （libsyrdkafka）
 
 # Introduction
 libsyrdkafka comes from librdkafka.  https://github.com/edenhill/librdkafka   
