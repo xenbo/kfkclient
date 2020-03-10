@@ -26,7 +26,7 @@ Installing: /usr/local/lib/libsyrdkafka.a
   
 
 # Check with command  pkg-config
-[dongbo@localhost]$ pkg-config --list-all |grep syrdkafka
+[dongbo@localhost]$ pkg-config --list-all |grep syrdkafka  
 syrdkafka                 libsyrdkafka - The  syKafka C/C++ library
 
 
