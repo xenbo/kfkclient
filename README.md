@@ -1,8 +1,7 @@
 # kfkclient （Libsyrdkafka）
 
 # Introduction
-libsyrdkafka comes from librdkafka.  https://github.com/edenhill/librdkafka
-
+libsyrdkafka comes from librdkafka.  https://github.com/edenhill/librdkafka   
 When producing a message, write the data to the cache first, when Kafka confirms. libsyrdkafka clears the cache
 
 
@@ -27,8 +26,8 @@ Installing: /usr/local/lib/libsyrdkafka.a
   
 
 # Check with command  pkg-config
- <br/> [dongbo@localhost]$ pkg-config --list-all |grep syrdkafka
- <br/> syrdkafka                 libsyrdkafka - The  syKafka C/C++ library
+[dongbo@localhost]$ pkg-config --list-all |grep syrdkafka
+syrdkafka                 libsyrdkafka - The  syKafka C/C++ library
 
 
 # go_kfk_client need libsyrdkafka
